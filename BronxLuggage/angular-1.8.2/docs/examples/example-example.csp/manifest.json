@@ -1,0 +1,8 @@
+{
+  "name": "example-example.csp",
+  "files": [
+    "index-production.php",
+    "script.js",
+    "protractor.js"
+  ]
+}

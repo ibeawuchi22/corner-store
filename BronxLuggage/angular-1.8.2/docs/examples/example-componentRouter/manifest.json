@@ -1,0 +1,12 @@
+{
+  "name": "example-componentRouter",
+  "files": [
+    "index-production.php",
+    "app.js",
+    "heroes.js",
+    "crisis.js",
+    "crisisDetail.php",
+    "dialog.js",
+    "styles.css"
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "name": "example-heroComponentTree",
+  "files": [
+    "index-production.php",
+    "index.js",
+    "heroList.js",
+    "heroDetail.js",
+    "editableField.js",
+    "heroList.php",
+    "heroDetail.php",
+    "editableField.php"
+  ]
+}

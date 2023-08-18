@@ -1,0 +1,8 @@
+{
+  "name": "example-expression-locals",
+  "files": [
+    "index-production.php",
+    "script.js",
+    "protractor.js"
+  ]
+}

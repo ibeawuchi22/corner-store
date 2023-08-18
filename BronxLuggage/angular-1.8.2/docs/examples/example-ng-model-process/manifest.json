@@ -1,0 +1,8 @@
+{
+  "name": "example-ng-model-process",
+  "files": [
+    "index-production.php",
+    "app.js",
+    "autocomplete.php"
+  ]
+}

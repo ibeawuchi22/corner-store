@@ -1,0 +1,8 @@
+{
+  "name": "example-module-hello-world",
+  "files": [
+    "index-production.php",
+    "script.js",
+    "protractor.js"
+  ]
+}

@@ -1,0 +1,9 @@
+{
+  "name": "example-ngOnCustom",
+  "files": [
+    "index-production.php",
+    "app.js",
+    "main.php",
+    "child.php"
+  ]
+}

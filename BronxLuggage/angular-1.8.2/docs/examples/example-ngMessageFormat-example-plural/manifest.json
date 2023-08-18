@@ -1,0 +1,8 @@
+{
+  "name": "example-ngMessageFormat-example-plural",
+  "files": [
+    "index-production.php",
+    "script.js",
+    "protractor.js"
+  ]
+}

@@ -1,0 +1,8 @@
+{
+  "name": "example-directive-transclude",
+  "files": [
+    "index-production.php",
+    "script.js",
+    "my-dialog.php"
+  ]
+}

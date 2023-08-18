@@ -1,0 +1,8 @@
+{
+  "name": "example-ngRepeat-tracking",
+  "files": [
+    "index-production.php",
+    "script.js",
+    "animations.css"
+  ]
+}

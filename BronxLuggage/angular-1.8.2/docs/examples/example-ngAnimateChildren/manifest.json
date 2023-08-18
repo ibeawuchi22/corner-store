@@ -1,0 +1,8 @@
+{
+  "name": "example-ngAnimateChildren",
+  "files": [
+    "index-production.php",
+    "animations.css",
+    "script.js"
+  ]
+}

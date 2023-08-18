@@ -1,0 +1,8 @@
+{
+  "name": "example-anchor-scroll-offset",
+  "files": [
+    "index-production.php",
+    "script.js",
+    "style.css"
+  ]
+}

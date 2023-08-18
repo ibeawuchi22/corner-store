@@ -1,0 +1,8 @@
+{
+  "name": "example-linky-filter",
+  "files": [
+    "index-production.php",
+    "script.js",
+    "protractor.js"
+  ]
+}

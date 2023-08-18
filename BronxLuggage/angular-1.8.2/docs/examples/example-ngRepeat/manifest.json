@@ -1,0 +1,9 @@
+{
+  "name": "example-ngRepeat",
+  "files": [
+    "index-production.php",
+    "script.js",
+    "animations.css",
+    "protractor.js"
+  ]
+}

@@ -1,0 +1,7 @@
+{
+  "name": "example-ngMaxlengthDirective",
+  "files": [
+    "index-production.php",
+    "protractor.js"
+  ]
+}

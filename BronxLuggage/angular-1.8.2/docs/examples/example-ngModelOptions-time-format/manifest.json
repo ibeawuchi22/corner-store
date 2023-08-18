@@ -1,0 +1,8 @@
+{
+  "name": "example-ngModelOptions-time-format",
+  "files": [
+    "index-production.php",
+    "script.js",
+    "timeExample.php"
+  ]
+}

@@ -1,0 +1,8 @@
+{
+  "name": "example-services-usage",
+  "files": [
+    "index-production.php",
+    "script.js",
+    "protractor.js"
+  ]
+}

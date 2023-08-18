@@ -1,0 +1,8 @@
+{
+  "name": "example-ng-class-even",
+  "files": [
+    "index-production.php",
+    "style.css",
+    "protractor.js"
+  ]
+}

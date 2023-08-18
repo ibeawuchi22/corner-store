@@ -1,0 +1,8 @@
+{
+  "name": "example-expression-eval",
+  "files": [
+    "index-production.php",
+    "script.js",
+    "protractor.js"
+  ]
+}

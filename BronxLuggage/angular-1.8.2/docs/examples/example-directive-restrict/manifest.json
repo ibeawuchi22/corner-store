@@ -1,0 +1,8 @@
+{
+  "name": "example-directive-restrict",
+  "files": [
+    "index-production.php",
+    "script.js",
+    "my-customer.php"
+  ]
+}

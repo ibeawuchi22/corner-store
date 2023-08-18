@@ -1,0 +1,9 @@
+{
+  "name": "example-http-service",
+  "files": [
+    "index-production.php",
+    "script.js",
+    "http-hello.php",
+    "protractor.js"
+  ]
+}

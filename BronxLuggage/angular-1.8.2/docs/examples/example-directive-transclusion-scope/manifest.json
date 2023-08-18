@@ -1,0 +1,8 @@
+{
+  "name": "example-directive-transclusion-scope",
+  "files": [
+    "index-production.php",
+    "script.js",
+    "my-dialog-close.php"
+  ]
+}

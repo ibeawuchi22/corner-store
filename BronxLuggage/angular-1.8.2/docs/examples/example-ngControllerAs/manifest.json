@@ -1,0 +1,8 @@
+{
+  "name": "example-ngControllerAs",
+  "files": [
+    "index-production.php",
+    "app.js",
+    "protractor.js"
+  ]
+}

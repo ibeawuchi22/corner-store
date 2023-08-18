@@ -1,0 +1,8 @@
+{
+  "name": "example-scope-hierarchies",
+  "files": [
+    "index-production.php",
+    "script.js",
+    "style.css"
+  ]
+}

@@ -1,0 +1,8 @@
+{
+  "name": "example-directive-template-url",
+  "files": [
+    "index-production.php",
+    "script.js",
+    "my-customer.php"
+  ]
+}

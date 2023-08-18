@@ -1,0 +1,8 @@
+{
+  "name": "example-directive-isolate",
+  "files": [
+    "index-production.php",
+    "script.js",
+    "my-customer-iso.php"
+  ]
+}

@@ -1,0 +1,8 @@
+{
+  "name": "example-cache-factory",
+  "files": [
+    "index-production.php",
+    "script.js",
+    "style.css"
+  ]
+}

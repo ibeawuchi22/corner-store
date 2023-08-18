@@ -1,0 +1,8 @@
+{
+  "name": "example-strict-di",
+  "files": [
+    "index-production.php",
+    "script.js",
+    "style.css"
+  ]
+}

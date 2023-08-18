@@ -1,0 +1,7 @@
+{
+  "name": "example-forms-custom-triggers",
+  "files": [
+    "index-production.php",
+    "script.js"
+  ]
+}

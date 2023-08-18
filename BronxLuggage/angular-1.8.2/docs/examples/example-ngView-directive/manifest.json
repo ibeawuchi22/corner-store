@@ -1,0 +1,11 @@
+{
+  "name": "example-ngView-directive",
+  "files": [
+    "index-production.php",
+    "book.php",
+    "chapter.php",
+    "animations.css",
+    "script.js",
+    "protractor.js"
+  ]
+}

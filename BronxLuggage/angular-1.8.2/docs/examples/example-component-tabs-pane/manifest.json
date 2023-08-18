@@ -1,0 +1,9 @@
+{
+  "name": "example-component-tabs-pane",
+  "files": [
+    "index-production.php",
+    "script.js",
+    "my-tabs.php",
+    "my-pane.php"
+  ]
+}

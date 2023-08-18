@@ -1,0 +1,9 @@
+{
+  "name": "example-sce-service",
+  "files": [
+    "index-production.php",
+    "script.js",
+    "test_data.json",
+    "protractor.js"
+  ]
+}

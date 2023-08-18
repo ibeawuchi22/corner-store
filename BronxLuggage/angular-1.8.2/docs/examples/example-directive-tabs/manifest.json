@@ -1,0 +1,9 @@
+{
+  "name": "example-directive-tabs",
+  "files": [
+    "index-production.php",
+    "script.js",
+    "my-tabs.php",
+    "my-pane.php"
+  ]
+}

@@ -1,0 +1,11 @@
+{
+  "name": "example-ng-include",
+  "files": [
+    "index-production.php",
+    "script.js",
+    "template1.php",
+    "template2.php",
+    "animations.css",
+    "protractor.js"
+  ]
+}

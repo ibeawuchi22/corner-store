@@ -1,0 +1,7 @@
+{
+  "name": "example-window-service",
+  "files": [
+    "index-production.php",
+    "protractor.js"
+  ]
+}

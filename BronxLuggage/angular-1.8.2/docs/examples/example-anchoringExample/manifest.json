@@ -1,0 +1,10 @@
+{
+  "name": "example-anchoringExample",
+  "files": [
+    "index-production.php",
+    "script.js",
+    "home.php",
+    "profile.php",
+    "animations.css"
+  ]
+}

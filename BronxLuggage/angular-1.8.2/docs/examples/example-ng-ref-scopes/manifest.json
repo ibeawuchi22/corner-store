@@ -1,0 +1,10 @@
+{
+  "name": "example-ng-ref-scopes",
+  "files": [
+    "index-production.php",
+    "index.js",
+    "root.php",
+    "styles.css",
+    "protractor.js"
+  ]
+}

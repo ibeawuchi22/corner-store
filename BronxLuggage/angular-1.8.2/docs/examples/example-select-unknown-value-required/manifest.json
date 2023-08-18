@@ -1,0 +1,8 @@
+{
+  "name": "example-select-unknown-value-required",
+  "files": [
+    "index-production.php",
+    "app.js",
+    "protractor.js"
+  ]
+}

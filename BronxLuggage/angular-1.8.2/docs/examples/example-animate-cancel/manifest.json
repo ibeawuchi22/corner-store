@@ -1,0 +1,9 @@
+{
+  "name": "example-animate-cancel",
+  "files": [
+    "index-production.php",
+    "app.js",
+    "template.php",
+    "style.css"
+  ]
+}

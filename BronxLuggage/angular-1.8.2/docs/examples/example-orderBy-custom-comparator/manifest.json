@@ -1,0 +1,9 @@
+{
+  "name": "example-orderBy-custom-comparator",
+  "files": [
+    "index-production.php",
+    "script.js",
+    "style.css",
+    "protractor.js"
+  ]
+}

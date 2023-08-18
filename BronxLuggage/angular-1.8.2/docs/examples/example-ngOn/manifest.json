@@ -1,0 +1,8 @@
+{
+  "name": "example-ngOn",
+  "files": [
+    "index-production.php",
+    "app.js",
+    "main.php"
+  ]
+}

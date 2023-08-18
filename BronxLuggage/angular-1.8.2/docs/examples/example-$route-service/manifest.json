@@ -1,0 +1,10 @@
+{
+  "name": "example-$route-service",
+  "files": [
+    "index-production.php",
+    "book.php",
+    "chapter.php",
+    "script.js",
+    "protractor.js"
+  ]
+}

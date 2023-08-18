@@ -1,0 +1,9 @@
+{
+  "name": "example-ngProp1",
+  "files": [
+    "index-production.php",
+    "app.js",
+    "main.php",
+    "styles.css"
+  ]
+}
