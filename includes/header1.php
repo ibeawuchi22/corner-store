@@ -14,7 +14,7 @@ if(isset($_SESSION['id'])){
    
 }else{
     $error = 'Unauthorised Access';
-    header('Location: ../BronxLuggage/login.php?error='.$error);
+    header('Location: ../CornerLuggage/login.php?error='.$error);
    
     return false; 
 }
@@ -26,13 +26,57 @@ if(isset($_SESSION['id'])){
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>User Dashboard - Bronx</title>
-    <link href="../BronxLuggage/img/WhatsApp Image 2023-06-22 at 13.52.40.jpg" rel="icon">
+    <title>User Dashboard - CornerStore</title>
+    <link href="../CornerLuggage/img/cornericon.png" rel="icon">
     <link rel="stylesheet" href="./css/dashboard.css">
     <link rel="stylesheet" href="./bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="./fontawesome-free-6.3.0-web/css/all.min.css">
 
     <style>
+                  #nav{
+      display: none;
+      position: fixed;
+      background-color: white;
+      width: 100%;
+      z-index: 1;
+      /* margin-top: 0px; */
+  }
+  .dropdown {
+    display: none;
+    position: fixed;
+    background-color: #fffefe;
+    
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    margin-left: 100px;
+    transition: all 0.3s ease; /* Add transition effect */
+    transform-origin: top;
+    opacity: 0;
+}
+
+.dropdown a {
+    color: rgb(6, 6, 6);
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.dropdown a:hover {
+    background-color: #f1f1f1;
+}
+
+.dropdown.show {
+    opacity: 1;
+    transform: translateY(10px); /* Adjust the value based on your preference */
+}
+
+.toggle{
+  margin-left: 80px;
+  cursor: pointer;
+}
+
 #goto{
     color: white;
 }
@@ -57,6 +101,19 @@ if(isset($_SESSION['id'])){
   display: block;
 }
 
+.content2{
+  position: relative;
+  top: -140px;
+  margin: auto;
+  margin-bottom: -370px;
+  width: 90%;
+  height: 900px;
+  display: none;
+  overflow: auto;
+}
+.content2 div {
+margin-bottom: 100px;
+}
 .active {
   background-color: gold;
   color: black;
@@ -222,7 +279,53 @@ footer{
     #holdfoot{
   flex-direction: column;
 }
+#head{
+  display: none;
+}
+.content{
+  display: none;
+}
+.content2{
+  display: block;
+}
+#nav{
+    
+    display: block;
+    position: fixed;
+    /* border: 3px solid black; */
+  
+}
+#hold{
+  display: none;
+}
+.reg{
+  width: 90%;
+ /* border: 2px solid blue; */
+
+
+}
+#sign, #contact, #acc, #buy, #info{
+  margin-bottom: 20px;
+}
+#sign{
+  margin-left: 30px;
+}
+footer{
+  margin-bottom: 0px;
+}
   }
     </style>
 </head>
 <body>
+<nav id="nav">
+    <h3 style="font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;"><img src="./img/cornericon.png" alt="CornerStore logo"
+        style="width: 50px; border-radius: 10px; opacity: 0.9;"><span style="color: rgb(172, 73, 73);">Corner</span>Store<span class="toggle"><i class="fa-solid fa-bars"></i></span> </h3>
+        <div id="dropdown" class="dropdown" style="position: absolute;">
+      
+       <a href="../includes/logout.php">Log out</a>
+       <a href="dashboard.php">Dashboard</a>
+        </div>
+      
+        <img src="../includes/dp/<?=$pic?>" alt="Profile Picture" style="height: 30px; width: 30px; position: absolute; left: 320px; top: 11px;"> 
+        <a href="luggageapp.php" id="goto"><p style="font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; position: absolute; right: 200px; top: 60px;  color: black;">Go to store   <i class="fa-sharp fa-solid fa-door-open"></i></p></a>  
+</nav>

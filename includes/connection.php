@@ -2,7 +2,7 @@
 $servername = 'localhost';
 $username = 'root';
 $password = '';
-$dbname = 'bronx';
+$dbname = 'corner_store';
 
 // creating connection
 $connect = mysqli_connect($servername, $username, $password, $dbname);

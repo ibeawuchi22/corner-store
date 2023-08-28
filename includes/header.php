@@ -15,7 +15,7 @@ if(isset($_SESSION['id'])){
    
 }else{
     $error = 'You need to login to access the store';
-    header('Location: ../BronxLuggage/login.php?error='.$error);
+    header('Location: ../CornerLuggage/login.php?error='.$error);
    
     return false; 
 }
@@ -29,12 +29,12 @@ if(isset($_SESSION['id'])){
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="./bootstrap/css/bootstrap.min.css">
-  <link href="./img/WhatsApp Image 2023-06-22 at 13.52.40.jpg" rel="icon">
+ <link href="./img/cornericon.png" rel="icon" style="border-radius: 60px;">
   <link rel="stylesheet" href="./fontawesome-free-6.3.0-web/css/all.min.css">
   <link rel="stylesheet" href="./css/luggage.css">
 
   
-  <title>Bronx</title>
+  <title>CornerStore</title>
   <style>
     
        .cart-icon {
@@ -83,20 +83,33 @@ if(isset($_SESSION['id'])){
         line-height: 20px;
         font-size: 14px;
       }
+
+      @media screen and (max-width: 700px){
+        #sign, #contact, #acc, #buy, #info{
+  margin-bottom: 20px;
+}
+#sign{
+  margin-left: 30px;
+}
+footer{
+  margin-bottom: 0px;
+}
+      }
   </style>
 </head>
 <body onload="myFunction1()" id="myPage">
   <iframe id="loader" src="./loader/loader2.php" style="display: block; border: none; width: 100%; height: 100vh;"></iframe>
   <nav id="nav">
-    <h3 style="font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;"><img src="./img/WhatsApp Image 2023-06-22 at 13.52.40.jpg" alt="bronx logo"
-        style="width: 50px; border-radius: 10px; opacity: 0.9;"><span style="color: rgb(172, 73, 73);">Bronx </span>Luggage <span class="toggle"><i class="fa-solid fa-bars"></i></span> </h3>
+    <h3 style="font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;"><img src="./img/cornericon.png" alt="CornerStore logo"
+        style="width: 50px; border-radius: 10px; opacity: 0.9;"><span style="color: rgb(172, 73, 73);">Corner</span>Store<span class="toggle"><i class="fa-solid fa-bars"></i></span> </h3>
         <div id="dropdown" class="dropdown" style="position: absolute;">
             <a href="./pages/male.php">Male</a>
             <a href="./pages/female.php">Female</a>
             <a href="./pages/kid.php">Kids</a>
            
         </div>
-      
+              
+        <a href="dashboard.php" style=""><img src="../includes/dp/<?=$pic?>" alt="" style="border: 1px solid red; position: absolute; margin-left: 320px; margin-top: -40px; border-radius: 100px; width: 30px; height: 30px;"></a>
         <?php
           $checkrev = "SELECT * FROM cart  WHERE userid = '$uid'";
               $ans = mysqli_query($connect, $checkrev);
@@ -110,15 +123,14 @@ if(isset($_SESSION['id'])){
       <div id="search">
       <p style="font-size: 12;" id="re" ><i class="fa-solid fa-magnifying-glass"></i>Start searching</p>
       </div>
-      <h3 id="lug" style="font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;"><img src="./img/WhatsApp Image 2023-06-22 at 13.52.40.jpg" alt="bronx logo"
-           style="width: 50px; border-radius: 10px; opacity: 0.9;"><span style="color: wheat;">Bronx </span>Luggage</h3>
+      <h3 id="lug" style="font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;"><img src="./img/cornericon.png" alt="CornerStore logo"
+           style="width: 50px; border-radius: 50px; opacity: 0.9; position: relative; left: -10px;"><span style="color: wheat;">Corner </span>Store</h3>
   
           <div id="font">
-              <i class="fa-sharp fa-solid fa-repeat"></i>
-              <i class="fa-regular fa-heart"></i>
+            
         
              
-              <div class="cart-icon" id="cart-icon" onclick="goToCart()" count="<?=mysqli_num_rows($ans)?>">
+              <div class="cart-icon" id="cart-icon" onclick="goToCart()" count="<?=mysqli_num_rows($ans)?>" style="right: 300px;">
                 <i class="fa-solid fa-cart-shopping" id="cart2" style="font-size: 22; color: #e1a409;"></i>
               </div>
 
@@ -126,7 +138,7 @@ if(isset($_SESSION['id'])){
           </div>
           
         
-         <a href="dashboard.php" style=""><img src="../includes/dp/<?=$pic?>" alt="" style="border: 1px solid gold; position: absolute; margin-left: 200px; margin-top: 5px; border-radius: 100px; width: 40px; height: 40px;"></a>
+         <a href="dashboard.php" style=""><img src="../includes/dp/<?=$pic?>" alt="" style="border: 1px solid red; position: absolute; margin-left: 150px; margin-top: 5px; border-radius: 100px; width: 40px; height: 40px;"></a>
       </div>
     <ul id="sex">
       <li><a href="./pages/male.php">Male</a></li>

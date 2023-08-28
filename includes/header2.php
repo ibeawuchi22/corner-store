@@ -14,7 +14,7 @@ if(isset($_SESSION['id'])){
    
 }else{
     $error = 'Unauthorised Access';
-    header('Location: ../BronxLuggage/dealerlogin.php?error='.$error);
+    header('Location: ../CornerLuggage/dealerlogin.php?error='.$error);
    
     return false; 
 }
@@ -26,8 +26,8 @@ if(isset($_SESSION['id'])){
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dealer Dashboard - Bronx</title>
-    <link href="../BronxLuggage/img/WhatsApp Image 2023-06-22 at 13.52.40.jpg" rel="icon">
+    <title>Dealer Dashboard - CornerStore</title>
+    <link href="../CornerLuggage/img/cornericon.png" rel="icon">
     <link rel="stylesheet" href="./css/dashboard.css">
     <link rel="stylesheet" href="./fontawesome-free-6.3.0-web/css/all.min.css">
     <link rel="stylesheet" href="./bootstrap/css/bootstrap.min.css">
@@ -336,11 +336,11 @@ padding-top: 130px;
     </style>
 </head>
 <body>
-<header id="head" style="position: fixed; width:100%; z-index: 1;">
-    <h1 style=" font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; text-align: left; position:absolute; top: 40px; left: 40px; color: wheat;"><img src="./img/WhatsApp Image 2023-06-22 at 13.52.40.jpg" alt="bronx logo"  style="width: 50px; border-radius: 10px; opacity: 0.9;">Bronx</h1>
+<header class="bg-dark" id="head" style="position: fixed; width:100%; z-index: 1;">
+    <h4 style=" font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; text-align: left; position:absolute; top: 40px; left: 40px; color: wheat;"><img src="./img/cornericon.png" alt="CornerStore logo"  style="width: 50px; border-radius: 10px; opacity: 0.9;">CornerStore</h4>
         <!-- Display user's name and profile picture -->
         <h3  style="color: gold;  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;">Hi <?=$username?>!</h3>
-        <img src="../includes/dealerdp/<?=$pic?>" alt="Profile Picture" style="height:100px; width: 100px; border: 1px solid gold;">
+        <img src="../includes/dealerdp/<?=$pic?>" alt="Profile Picture" style="height:50px; width: 50px; border: 1px solid gold;">
         <nav>
         <!-- Quick access links to dashboard sections -->
         <ul>
@@ -354,8 +354,8 @@ padding-top: 130px;
     </nav>
     </header>
     <nav id="nav">
-    <h3 style="font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;"><img src="./img/WhatsApp Image 2023-06-22 at 13.52.40.jpg" alt="bronx logo"
-        style="width: 50px; border-radius: 10px; opacity: 0.9;"><span style="color: rgb(172, 73, 73);">Bronx </span>Luggage <span class="toggle"><i class="fa-solid fa-bars"></i></span> </h3>
+    <h3 style="font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;"><img src="./img/cornericon.png" alt="CornerStore logo"
+        style="width: 50px; border-radius: 10px; opacity: 0.9;"><span style="color: rgb(172, 73, 73);">Corner</span>Store<span class="toggle"><i class="fa-solid fa-bars"></i></span> </h3>
         <div id="dropdown" class="dropdown" style="position: absolute;">
         <a href="post.php">Post Item</a>
         <a href="dealerdash.php">My Profile</a>

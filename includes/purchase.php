@@ -41,12 +41,12 @@ if (isset($_GET['uid'])) {
 
         // All items are processed successfully
         $success = 'Purchase made successfully';
-        header('Location: ../BronxLuggage/cart.php?success=' . $success);
+        header('Location: ../CornerLuggage/cart.php?success=' . $success);
         return false;
     } else {
         // Cart is empty
         $error = 'Your cart is empty';
-        header('Location: ../BronxLuggage/cart.php?error=' . $error);
+        header('Location: ../CornerLuggage/cart.php?error=' . $error);
         return false;
     }
 } else {

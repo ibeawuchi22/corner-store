@@ -2,5 +2,5 @@
     session_start();
     session_unset();
     session_destroy();
-    header('Location: ../BronxLuggage/index.php');
+    header('Location: ../CornerLuggage/index.php');
 ?>

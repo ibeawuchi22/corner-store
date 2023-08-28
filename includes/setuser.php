@@ -9,7 +9,7 @@ if(isset($_POST['submit'])){
 
   if($email == "" || $username == "" || $phone == "" ){
     $error = 'All fields are required';
-    header('Location: ../BronxLuggage/useredit.php?error='.$error);
+    header('Location: ../CornerLuggage/useredit.php?error='.$error);
     return false;
   }
 
@@ -42,26 +42,26 @@ if(isset($_POST['submit'])){
                 if($result){
                     unlink('dp/'.$img);
                     $success = 'Profile updated';
-                    header('Location: ../BronxLuggage/useredit.php?success='.$success);
+                    header('Location: ../CornerLuggage/useredit.php?success='.$success);
                     return false;
                 }else{
                     $error = 'error updating account';
-                    header('Location: ../BronxLuggage/useredit.php?error='.$error);
+                    header('Location: ../CornerLuggage/useredit.php?error='.$error);
                     return false;
                 }
             }else{
                 $error = 'error uploading file';
-                header('Location: ../BronxLuggage/useredit.php?error='.$error);
+                header('Location: ../CornerLuggage/useredit.php?error='.$error);
                 return false;
             }
         }else{
             $error = 'upload pictures only';
-            header('Location: ../BronxLuggage/useredit.php?error='.$error);
+            header('Location: ../CornerLuggage/useredit.php?error='.$error);
             return false;
         }
     }else{
         $error = 'file upload is too large';
-        header('Location: ../BronxLuggage/useredit.php?error='.$error);
+        header('Location: ../CornerLuggage/useredit.php?error='.$error);
         return false;
     }
   }else{  // if user did not update image
@@ -69,11 +69,11 @@ if(isset($_POST['submit'])){
    $result = mysqli_query($connect, $sql);
    if($result){
        $success = 'Profile updated';
-       header('Location: ../BronxLuggage/useredit.php?success='.$success);
+       header('Location: ../CornerLuggage/useredit.php?success='.$success);
        return false;
    }else{
        $error = 'error updating account';
-       header('Location: ../BronxLuggage/useredit.php?error='.$error);
+       header('Location: ../CornerLuggage/useredit.php?error='.$error);
        return false;
    }
   }

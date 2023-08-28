@@ -12,7 +12,7 @@
 
     if( $username == "" || $password == "" ){
         $error = 'All fields are required';
-        header('Location: ../BronxLuggage/dealerlogin.php?error='.$error);
+        header('Location: ../CornerLuggage/dealerlogin.php?error='.$error);
         return false;
       }
 
@@ -29,17 +29,17 @@
     $rows = mysqli_fetch_assoc($res);
     $_SESSION['id'] = $rows['id'];
     $_SESSION['username'] = $rows['username'];
-    header('Location: ../BronxLuggage/dealerdash.php');
+    header('Location: ../CornerLuggage/dealerdash.php');
     
     }else{
     $error = 'User does not exist';
-    header('Location: ../BronxLuggage/dealerlogin.php?error='.$error);
+    header('Location: ../CornerLuggage/dealerlogin.php?error='.$error);
     return false;
     }
 
  }else{
     $error = 'Unauthorised Access';
-    header('Location: ../BronxLuggage/dealerlogin.php?error='.$error);
+    header('Location: ../CornerLuggage/dealerlogin.php?error='.$error);
    
     return false; 
 }

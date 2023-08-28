@@ -11,7 +11,7 @@ if(isset($_POST['submit'])){
 
     if($name == "" || $summary == "" || $review == ""){
         $error = 'All fields are required';
-        header('Location: ../BronxLuggage/pages/case1.php?error='.$error);
+        header('Location: ../CornerLuggage/pages/case1.php?error='.$error);
         return false;
     }
 
@@ -26,11 +26,11 @@ if(isset($_POST['submit'])){
 
     if($result){
         $success = 'review sent successfully';
-        header('Location: ../BronxLuggage/pages/case1.php?success='.$success.'&bid='.$bid);
+        header('Location: ../CornerLuggage/pages/case1.php?success='.$success.'&bid='.$bid);
         exit();
     }else{
         $error = 'error sending review';
-        header('Location: ../BronxLuggage/pages/case1.php?error='.$error.'&bid='.$bid);
+        header('Location: ../CornerLuggage/pages/case1.php?error='.$error.'&bid='.$bid);
         exit();
     }
     

@@ -41,13 +41,13 @@ if(isset($_GET['bid'])){
            
         }else{
             $error = 'You need to login to access the store';
-            header('Location: ../BronxLuggage/login.php?error='.$error);
+            header('Location: ../CornerLuggage/login.php?error='.$error);
            
             return false; 
         }
   }else{
     $error = 'Unauthorised Access';
-       header('Location: ../BronxLuggage/login.php?error='.$error);
+       header('Location: ../CornerLuggage/login.php?error='.$error);
        return false;
      }
      
@@ -59,25 +59,89 @@ if(isset($_GET['bid'])){
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bronx</title>
-    <link href="../img/WhatsApp Image 2023-06-22 at 13.52.40.jpg" rel="icon">
+    <title>CornerStore</title>
+    <link href="../img/cornericon.png" rel="icon">
     <link rel="stylesheet" href="../bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="../fontawesome-free-6.3.0-web/css/all.min.css">
     <link rel="stylesheet" href="../css/item.css">
 
+
+    <style>
+         .cart-icon {
+        
+        position: fixed;
+        z-index: 2;
+        top: 25px;
+        right: 190px;
+        display: inline-block;
+        margin-left: 10px;
+        cursor: pointer;
+      }
+      .cart-icon::after {
+        content: attr(count);
+        position: absolute;
+        top: -10px;
+        right: -10px;
+        background-color: red;
+        color: white;
+        border-radius: 50%;
+        width: 20px;
+        height: 20px;
+        text-align: center;
+        line-height: 20px;
+        font-size: 14px;
+      }
+
+      .cart-icon1 {
+        position: fixed;
+        display: inline-block;
+        margin-left: 10px;
+        cursor: pointer;
+        z-index: 2;
+      }
+      .cart-icon1::after {
+        content: attr(count);
+        position: absolute;
+        top: -10px;
+        right: -10px;
+        background-color: red;
+        color: white;
+        border-radius: 50%;
+        width: 20px;
+        height: 20px;
+        text-align: center;
+        line-height: 20px;
+        font-size: 14px;
+      }
+      @media screen and (max-width: 700px){
+        #sign, #contact, #acc, #buy, #info{
+  margin-bottom: 20px;
+}
+#sign{
+  margin-left: 30px;
+}
+footer{
+  margin-bottom: 0px;
+}
+      }
+    </style>
 </head>
 <body>
   <nav id="nav">
-    <h3 style="font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;"><img src="../img/WhatsApp Image 2023-06-22 at 13.52.40.jpg" alt="bronx logo"
-        style="width: 50px; border-radius: 10px; opacity: 0.9;"><span style="color: rgb(172, 73, 73);">Bronx </span>Luggage <span class="toggle"><i class="fa-solid fa-bars"></i></span> </h3>
+    <h3 style="font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;"><img src="../img/cornericon.png" alt="CornerStore logo"
+        style="width: 50px; border-radius: 10px; opacity: 0.9;"><span style="color: rgb(172, 73, 73);">Corner</span>Store<span class="toggle"><i class="fa-solid fa-bars"></i></span> </h3>
         <div id="dropdown" class="dropdown" style="position: absolute;">
           <a href="male.php">Male</a>
           <a href="female.php">Female</a>
           <a href="kid.php">Kids</a>
            
         </div>
-        <div class="cart-icon1" id="" onclick="goToCart()" data-count="0">
-          <i class="fa-solid fa-cart-shopping" id="cart1" style="font-size: 22; color: #ff2929;"></i>
+        <?php
+          $checkrev = "SELECT * FROM cart  WHERE userid = '$uid'";
+              $ans = mysqli_query($connect, $checkrev);
+              ?>    
+        <div class="cart-icon1" id="" onclick="goToCart()" count="<?=mysqli_num_rows($ans)?>">
+          <i class="fa-solid fa-cart-shopping" id="" style="font-size: 22; color: #ff2929;"></i>
         </div>
 </nav>
   <div id="n2">
@@ -85,15 +149,18 @@ if(isset($_GET['bid'])){
       <div id="search">
       <p style="font-size: 12;" id="re" ><i class="fa-solid fa-magnifying-glass"></i>Start searching</p>
       </div>
-      <h3 id="lug" style="font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;"><img src="../img/WhatsApp Image 2023-06-22 at 13.52.40.jpg" alt="bronx logo"
-           style="width: 50px; border-radius: 10px; opacity: 0.9;"><span style="color: wheat;">Bronx </span>Luggage</h3>
+      <h3 id="lug" style="font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;"><img src="../img/cornericon.png" alt="CornerStore logo"
+           style="width: 50px; border-radius: 10px; opacity: 0.9; position: relative; left: -10px;"><span style="color: wheat;">Corner </span>Store</h3>
   
           <div id="font">
-              <i class="fa-sharp fa-solid fa-repeat"></i>
-              <i class="fa-regular fa-heart"></i>
-              <div class="cart-icon" onclick="goToCart()" data-count="0">
-                <i class="fa-solid fa-cart-shopping" style="font-size: 23;"></i>
-              </div>
+              
+          <?php
+          $checkrev = "SELECT * FROM cart  WHERE userid = '$uid'";
+              $ans = mysqli_query($connect, $checkrev);
+              ?>    
+        <div class="cart-icon1" id="" onclick="goToCart()" count="<?=mysqli_num_rows($ans)?>">
+          <i class="fa-solid fa-cart-shopping" id="" style="font-size: 22; color: #e1a409;"></i>
+        </div>
           </div>
           
         
@@ -111,7 +178,7 @@ if(isset($_GET['bid'])){
     <ul class="breadcrumb ">
         <li class="breadcrumb-item"><a href="../index.php">Home</a></li>
         <li class="breadcrumb-item"><a href="../luggageapp.php">luggage</a></li>
-        <li class="breadcrumb-item"><a href="case1.php">Preview</a></li>
+        <li class="breadcrumb-item"><a href="case1.php?bid=<?=$bid?>">Preview</a></li>
        
     </ul>
     <h1 id="luggy" style="position: absolute; font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;">Preview</h1>

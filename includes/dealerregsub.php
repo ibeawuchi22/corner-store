@@ -9,7 +9,7 @@ if(isset($_POST['submit'])){
 
     if($username == "" || $phone == "" || $email == "" || $password == ""){
         $error = 'All fields are required';
-        header('Location: ../BronxLuggage/dealerreg.php?error='.$error);
+        header('Location: ../CornerLuggage/dealerreg.php?error='.$error);
         return false;
     }
 
@@ -23,7 +23,7 @@ if(isset($_POST['submit'])){
     $res = mysqli_query($connect, $sql);
     if(mysqli_num_rows($res) > 0){
         $error = 'Email address already taken';
-        header('Location: ../BronxLuggage/dealerreg.php?error='.$error);
+        header('Location: ../CornerLuggage/dealerreg.php?error='.$error);
         return false;
     }
     if(isset($_FILES['file'])){
@@ -51,26 +51,26 @@ if(isset($_POST['submit'])){
 
                     if($result){
                         $success = 'registration successful';
-                        header('Location: ../BronxLuggage/dealerlogin.php?success='.$success);
+                        header('Location: ../CornerLuggage/dealerlogin.php?success='.$success);
                         return false;
                     }else{
                         $error = 'error creating account';
-                        header('Location: ../BronxLuggage/dealerreg.php?error='.$error);
+                        header('Location: ../CornerLuggage/dealerreg.php?error='.$error);
                         return false;
                     }
                 }else{
                     $error = 'error uploading file';
-                    header('Location: ../BronxLuggage/dealerreg.php?error='.$error);
+                    header('Location: ../CornerLuggage/dealerreg.php?error='.$error);
                     return false;
                 }
             }else{
                 $error = 'upload pictures only';
-                header('Location: ../BronxLuggage/dealerreg.php?error='.$error);
+                header('Location: ../CornerLuggage/dealerreg.php?error='.$error);
                 return false;
             }
         }else{
             $error = 'file upload is too large';
-            header('Location: ../BronxLuggage/dealerreg.php?error='.$error);
+            header('Location: ../CornerLuggage/dealerreg.php?error='.$error);
             return false;
         }
       }
@@ -80,7 +80,7 @@ if(isset($_POST['submit'])){
 
 }else{
     $error = 'Unauthorised Access';
-    header('Location: ../BronxLuggage/dealerreg.php?error='.$error);
+    header('Location: ../CornerLuggage/dealerreg.php?error='.$error);
    
     return false; 
 }

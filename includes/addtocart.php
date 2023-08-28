@@ -21,11 +21,11 @@ $result = mysqli_query($connect, $sql);
 
 if($result){
     $success = 'Item added to cart';
-    header('Location: ../BronxLuggage/luggageapp.php?success='.$success);
+    header('Location: ../CornerLuggage/luggageapp.php?success='.$success);
     return false;
 }else{
     $error = 'Error adding item to cart';
-    header('Location: ../BronxLuggage/luggageapp.php?error='.$error);
+    header('Location: ../CornerLuggage/luggageapp.php?error='.$error);
     return false;
 }
 }else{

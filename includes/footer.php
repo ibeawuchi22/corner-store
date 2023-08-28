@@ -40,7 +40,7 @@
           
               <ul>
                   <p>Contacts</p> 
-                  <li><a href="">E-mail: bronxvil@org.com</a></li>
+                  <li><a href="">E-mail: CornerStorevil@org.com</a></li>
                   <li><a href="">Telephone: +3(909) 2387-6534</a></li>
                   <li><a href="">9am to 10pm everyday</a></li>
               </ul>

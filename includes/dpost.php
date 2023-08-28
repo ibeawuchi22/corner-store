@@ -14,7 +14,7 @@ if(isset($_POST['submit'])){
 
     if($brand == "" || $sex == "" || $casing == "" || $color == "" || $designer == "" || $desc == "" || $price == ""){
         $error = 'All fields are required';
-        header('Location: ../BronxLuggage/post.php?error='.$error);
+        header('Location: ../CornerLuggage/post.php?error='.$error);
         return false;
     }
 
@@ -52,26 +52,26 @@ if(isset($_POST['submit'])){
 
                     if($result){
                         $success = 'Post created successful';
-                        header('Location: ../BronxLuggage/post.php?success='.$success);
+                        header('Location: ../CornerLuggage/post.php?success='.$success);
                         return false;
                     }else{
                         $error = 'error creating post';
-                        header('Location: ../BronxLuggage/post.php?error='.$error);
+                        header('Location: ../CornerLuggage/post.php?error='.$error);
                         return false;
                     }
                 }else{
                     $error = 'error uploading file';
-                    header('Location: ../BronxLuggage/post.php?error='.$error);
+                    header('Location: ../CornerLuggage/post.php?error='.$error);
                     return false;
                 }
             }else{
                 $error = 'upload pictures only';
-                header('Location: ../BronxLuggage/post.php?error='.$error);
+                header('Location: ../CornerLuggage/post.php?error='.$error);
                 return false;
             }
         }else{
             $error = 'file upload is too large';
-            header('Location: ../BronxLuggage/post.php?error='.$error);
+            header('Location: ../CornerLuggage/post.php?error='.$error);
             return false;
         }
       }
@@ -81,7 +81,7 @@ if(isset($_POST['submit'])){
 
 }else{
     $error = 'Unauthorised Access';
-    header('Location: ../BronxLuggage/post.php?error='.$error);
+    header('Location: ../CornerLuggage/post.php?error='.$error);
    
     return false; 
 }

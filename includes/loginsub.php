@@ -12,7 +12,7 @@
 
     if( $email == "" || $password == "" ){
         $error = 'All fields are required';
-        header('Location: ../BronxLuggage/login.php?error='.$error);
+        header('Location: ../CornerLuggage/login.php?error='.$error);
         return false;
       }
 
@@ -29,17 +29,17 @@
     $rows = mysqli_fetch_assoc($res);
     $_SESSION['id'] = $rows['id'];
     $_SESSION['email'] = $rows['email'];
-    header('Location: ../BronxLuggage/dashboard.php');
+    header('Location: ../CornerLuggage/dashboard.php');
     
     }else{
     $error = 'User does not exist';
-    header('Location: ../BronxLuggage/login.php?error='.$error);
+    header('Location: ../CornerLuggage/login.php?error='.$error);
     return false;
     }
 
  }else{
     $error = 'Unauthorised Access';
-    header('Location: ../BronxLuggage/login.php?error='.$error);
+    header('Location: ../CornerLuggage/login.php?error='.$error);
    
     return false; 
 }

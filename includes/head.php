@@ -28,7 +28,7 @@ if(isset($_SESSION['id'])){
    $img = $row2['img'];
 }else{
     $error = 'Unauthorised Access';
-    header('Location: ../BronxLuggage/login.php?error='.$error);
+    header('Location: ../CornerLuggage/login.php?error='.$error);
    
     return false; 
 }
@@ -40,7 +40,7 @@ if(isset($_SESSION['id'])){
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Cart</title>
-  <link href="./img/WhatsApp Image 2023-06-22 at 13.52.40.jpg" rel="icon">
+ <link href="./img/cornericon.png" rel="icon" style="border-radius: 60px;">
   <link rel="stylesheet" href="./bootstrap/css/bootstrap.min.css">
   <link rel="stylesheet" href="./fontawesome-free-6.3.0-web/css/all.min.css">
   <link rel="stylesheet" href="./css/cart.css">
@@ -80,13 +80,47 @@ if(isset($_SESSION['id'])){
   
 }
 
-
+#dec{
+  position: absolute; 
+  top: 320px; 
+  left: 670px; 
+  font-size: 82px; 
+  color: #000000;
+}
 
 
 
 @media screen and (max-width: 700px){
     #logo{
   display: none;
+}
+#cart-items1{
+  width: fit-content;
+  /* border: 3px solid black; */
+  /* padding: 30px; */
+}
+
+#tab{
+  /* border: 3px solid red; */
+ position: relative;
+ left: -30px;
+ /* width: 100; */
+}
+#dec{
+  display: none;
+  /* border: 3px solid black; */
+  font-size: 35px;
+ left: 140px;
+ top: 180px;
+}
+#sign, #contact, #acc, #buy, #info{
+  margin-bottom: 20px;
+}
+#sign{
+  margin-left: 30px;
+}
+footer{
+  margin-bottom: 0px;
 }
 }
 
@@ -97,8 +131,8 @@ if(isset($_SESSION['id'])){
       <div id="search">
       <p style="font-size: 12;" id="re" ><i class="fa-solid fa-magnifying-glass"></i>Start searching</p>
       </div>
-      <h3 id="lug" style="font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;"><img src="./img/WhatsApp Image 2023-06-22 at 13.52.40.jpg" alt="bronx logo"
-           style="width: 50px; border-radius: 10px; opacity: 0.9;"><span style="color: wheat;">Bronx </span>Luggage</h3>
+      <h3 id="lug" style="font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;"><img src="./img/cornericon.png" alt="CornerStore logo"
+           style="width: 50px; border-radius: 10px; opacity: 0.9;"><span style="color: wheat;">Corner </span>Store</h3>
   
          
           

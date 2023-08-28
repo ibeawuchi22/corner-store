@@ -8,11 +8,11 @@ if(isset($_GET['cid'])){
     $res = mysqli_query($connect, $sql);
     if($res){
         $success = 'Item Removed';
-        header('Location: ../BronxLuggage/cart.php?success=' . $success);
+        header('Location: ../CornerLuggage/cart.php?success=' . $success);
         return false;
     }else{
         $error = 'Error deleting item';
-        header('Location: ../BronxLuggage/cart.php?error=' . $error);
+        header('Location: ../CornerLuggage/cart.php?error=' . $error);
         return false;
     }
 }else{
